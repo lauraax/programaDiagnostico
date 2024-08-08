@@ -1,1 +1,1 @@
-![Diagrama closet](out/diagramaCloset/diagrama.png)
+![Diagrama closet](out/diagramaCloset/diagrama/diagrama.png)
