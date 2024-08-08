@@ -2,6 +2,7 @@
 
 left to right direction
 actor user as us
+actor system as sys
 
 rectangle Armario {
     usecase "Escoger camiseta" as UC1
@@ -50,4 +51,8 @@ UC2 --> UC2.3
 UC3 --> UC3.1
 UC3 --> UC3.2
 UC3 --> UC3.3
+
+sys --> UC4
+sys --> UC5
+sys --> UC6
 @enduml
