@@ -1,0 +1,44 @@
+@startuml
+interface InformacionRopa {
+    +mostrarInfo(): void
+}
+
+abstract class Ropa {
+    -estilo: String
+    -color: String
+    +getEstilo(): String
+    +getColor(): String
+}
+
+class Camiseta {
+    +mostrarInfo(): void
+}
+
+class Pantalon {
+    +mostrarInfo(): void
+}
+
+class Zapatos {
+    +mostrarInfo(): void
+}
+
+class Armario {
+    -camisetas: Ropa[]
+    -pantalones: Ropa[]
+    -zapatos: Ropa[]
+    -camisetaSeleccionada: Ropa
+    -pantalonSeleccionado: Ropa
+    -zapatosSeleccionados: Ropa
+    -random: Random
+    -scanner: Scanner
+    +mostrarMenu(): void
+    +main(String[] args): void
+}
+
+InformacionRopa <|.. Ropa : implementa
+Ropa <|-- Camiseta
+Ropa <|-- Pantalon
+Ropa <|-- Zapatos
+
+Armario --> Ropa : contiene
+@enduml

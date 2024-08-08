@@ -1,0 +1,53 @@
+@startuml
+
+left to right direction
+actor user as us
+
+rectangle Armario {
+    usecase "Escoger camiseta" as UC1
+    usecase "Escoger pantalón" as UC2
+    usecase "Escoger zapatos" as UC3
+    usecase "Aleatorio" as UC4
+    usecase "Mostrar resultado" as UC5
+    usecase "Salir" as UC6
+
+}
+
+
+rectangle Camisetas{
+    usecase "Escoger baby tee" as UC1.1
+    usecase "Escoger Deportiva" as UC1.2
+    usecase "Escoger crop top" as UC1.3
+}
+
+rectangle Pantalones{
+    usecase "Escoger falda" as UC2.1
+    usecase "EScoger cargo" as UC2.2
+    usecase "Escoger Jean" as UC2.3
+}
+
+rectangle Zapatos{
+    usecase "Escoger botas" as UC3.1
+    usecase "Escoger deportivo" as UC3.2
+    usecase "Escoger casual" as UC3.3
+}
+
+us --> UC1
+us --> UC2
+us --> UC3
+us --> UC4
+us --> UC5
+us --> UC6
+
+UC1 --> UC1.1
+UC1 --> UC1.2
+UC1 --> UC1.3
+
+UC2 --> UC2.1
+UC2 --> UC2.2
+UC2 --> UC2.3
+
+UC3 --> UC3.1
+UC3 --> UC3.2
+UC3 --> UC3.3
+@enduml
