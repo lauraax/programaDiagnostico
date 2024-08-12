@@ -2,9 +2,10 @@
 
 left to right direction
 actor user as us
-actor system as sys
 
-rectangle Armario {
+rectangle System {
+
+rectangle Armario{
     usecase "Escoger camiseta" as UC1
     usecase "Escoger pantalón" as UC2
     usecase "Escoger zapatos" as UC3
@@ -13,7 +14,6 @@ rectangle Armario {
     usecase "Salir" as UC6
 
 }
-
 
 rectangle Camisetas{
     usecase "Escoger baby tee" as UC1.1
@@ -31,6 +31,8 @@ rectangle Zapatos{
     usecase "Escoger botas" as UC3.1
     usecase "Escoger deportivo" as UC3.2
     usecase "Escoger casual" as UC3.3
+}
+
 }
 
 us --> UC1
@@ -52,7 +54,4 @@ UC3 --> UC3.1
 UC3 --> UC3.2
 UC3 --> UC3.3
 
-sys --> UC4
-sys --> UC5
-sys --> UC6
 @enduml
