@@ -46,12 +46,12 @@ public class Armario {
         while(true){
             System.out.println("\nBienvenido al Armario");
             System.out.println("1. Elegir una camiseta");
-            System.out.println("2. Elegir un pantalón");
+            System.out.println("2. Elegir un pantalon");
             System.out.println("3. Elegir unos zapatos");
-            System.out.println("4. Seleccionar ropa aleatoriamente");
-            System.out.println("5. Imprimir resultado");
+            System.out.println("4. Aleatorio");
+            System.out.println("5. Mostrar resultado");
             System.out.println("6. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
                         
             int opcion = scanner.nextInt();
             
@@ -87,7 +87,7 @@ public class Armario {
                     System.out.println("Ropa seleccionada aleatoriamente.");
                 }
                 case 5 ->{
-                    System.out.println("\nTu selección final es:");
+                    System.out.println("\nTu seleccion final es:");
                     if (camisetaSeleccionada != null) {
                         camisetaSeleccionada.mostrarInfo();
                     } else {
@@ -96,7 +96,7 @@ public class Armario {
                     if (pantalonSeleccionado != null) {
                         pantalonSeleccionado.mostrarInfo();
                     } else {
-                        System.out.println("No has seleccionado un pantalón.");
+                        System.out.println("No has seleccionado un pantalon.");
                     }
                     if (zapatosSeleccionados != null) {
                         zapatosSeleccionados.mostrarInfo();
@@ -110,7 +110,7 @@ public class Armario {
                     scanner.close();
                     System.exit(0);
                 }
-                default -> System.out.println("Opción no válida. Inténtalo de nuevo.");
+                default -> System.out.println("Opcion no valida. Intentalo de nuevo.");
             }   
          
         }
