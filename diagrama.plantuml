@@ -35,10 +35,10 @@ class Armario {
     +main(String[] args): void
 }
 
-InformacionRopa <|.. Ropa : implementa
+InformacionRopa <|.. Ropa 
 Ropa <|-- Camiseta
 Ropa <|-- Pantalon
 Ropa <|-- Zapatos
 
-Armario --> Ropa : contiene
+Armario o-- Ropa 
 @enduml
