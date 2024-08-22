@@ -116,13 +116,7 @@ public class Armario {
         }
         
     }
-    
-   public static void main(String[] args) {
-       Armario armario = new Armario();
-       armario.mostrarMenu();
-               
-        }
-                
+        
 }
                 
     
