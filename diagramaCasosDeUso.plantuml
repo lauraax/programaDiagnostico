@@ -1,20 +1,23 @@
 @startuml
 
 left to right direction
+
 actor user as us
 actor system as sys
 
-
-    usecase "Ingresar al sistema" as UC1
 
 rectangle Armario{
     usecase "Escoger ropa" as UC2
 }
 
+    usecase "Ingresar al sistema" as UC1
     usecase "Validar información" as UC4
     usecase "Mostrar resultado" as UC5
     usecase "Salir" as UC6
     usecase "Mostrar menú" as UC7
+    usecase "Pedir resultado" as UC8
+    usecase "Finalizar el programa" as UC9
+    
 
 us --> UC1
 
@@ -24,10 +27,20 @@ UC7 <-- sys
 UC7 --> UC2
 UC7 --> UC6
 
-UC2 --> UC4
-UC4 <--- sys
+UC6--> UC9
+UC9 <-- sys
 
-UC4 --> UC5
+UC2 --> UC4
+
+
+UC4 <-- sys
+UC4 --> UC8
+
+UC8 --> UC5
+
+UC5 <-- sys
+
+
 
 
 @enduml

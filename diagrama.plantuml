@@ -32,6 +32,10 @@ class Armario {
     -random: Random
     -scanner: Scanner
     +mostrarMenu(): void
+    
+}
+
+class Main{
     +main(String[] args): void
 }
 
@@ -40,5 +44,6 @@ Ropa <|-- Camiseta
 Ropa <|-- Pantalon
 Ropa <|-- Zapatos
 
-Armario o-- Ropa 
+Armario *-- Ropa 
+Main <.. Armario 
 @enduml
